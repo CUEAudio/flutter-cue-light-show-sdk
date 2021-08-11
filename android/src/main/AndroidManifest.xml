@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.aloompa.cue_light_show.flutter_cue_light_show_sdk">
+
+    <application>
+        <activity android:name="com.cueaudio.live.CUEActivity"
+            android:theme="@style/CUEAppTheme" />
+    </application>
+
+</manifest>
