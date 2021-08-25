@@ -6,7 +6,11 @@ class FlutterCueLightShowSdk {
   static const MethodChannel _channel =
       const MethodChannel('flutter_cue_light_show_sdk');
 
-  static Future<void> get launchCue async {
+  static Future<void> fetchTheme() async {
+    await _channel.invokeMethod('fetchTheme');
+  }
+
+  static Future<void> launchCue() async {
     await _channel.invokeMethod('launchCue');
   }
 }
