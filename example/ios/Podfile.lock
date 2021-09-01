@@ -1,0 +1,65 @@
+PODS:
+  - CUEBluetooth (0.0.11)
+  - CUELive-bundle-Default (2.14.0)
+  - CUELive-framework (2.14.0)
+  - engine (1.35.0)
+  - Flutter (1.0.0)
+  - flutter_cue_light_show_sdk (0.0.1):
+    - CUEBluetooth
+    - CUELive-bundle-Default (~> 2.2)
+    - CUELive-framework (~> 2.2)
+    - engine (~> 1.14)
+    - Flutter
+    - lottie-ios (= 2.5.3)
+    - MQTTClient
+    - Reachability
+    - TrueTime
+  - lottie-ios (2.5.3)
+  - MQTTClient (0.15.3):
+    - MQTTClient/Core (= 0.15.3)
+  - MQTTClient/Core (0.15.3):
+    - MQTTClient/Manager
+    - MQTTClient/Min
+  - MQTTClient/Manager (0.15.3):
+    - MQTTClient/Min
+  - MQTTClient/Min (0.15.3)
+  - Reachability (3.2)
+  - TrueTime (5.0.3)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - flutter_cue_light_show_sdk (from `.symlinks/plugins/flutter_cue_light_show_sdk/ios`)
+
+SPEC REPOS:
+  https://cueaudio.jfrog.io/cueaudio/api/pods/cocoapods-local:
+    - CUEBluetooth
+    - CUELive-bundle-Default
+    - CUELive-framework
+    - engine
+  https://github.com/CocoaPods/Specs.git:
+    - lottie-ios
+    - MQTTClient
+    - Reachability
+    - TrueTime
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  flutter_cue_light_show_sdk:
+    :path: ".symlinks/plugins/flutter_cue_light_show_sdk/ios"
+
+SPEC CHECKSUMS:
+  CUEBluetooth: e04c4001b6767e522ccc0d0820088b5b0c3280f6
+  CUELive-bundle-Default: 5cce318ab1f833028bd04af8c95093cda5c3d43c
+  CUELive-framework: c6928da6d562557b0ff36fdaa691e1dcf62e17b5
+  engine: c6ab70feb552e52565de1733cb209d844a39c15d
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+  flutter_cue_light_show_sdk: 9fdcb3df79c35049e390128c44020df36f89567d
+  lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
+  MQTTClient: 0dfa04e789479c2e461786464969895c1fcb0875
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  TrueTime: b49551ffafb28a9dee04e51b226f42a416010842
+
+PODFILE CHECKSUM: a3315ca49a1fd2602939e33df25304bdecc5175d
+
+COCOAPODS: 1.10.1

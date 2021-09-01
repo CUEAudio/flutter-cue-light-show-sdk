@@ -1,5 +1,6 @@
 import Flutter
 import UIKit
+import CUELive
 
 public class SwiftFlutterCueLightShowSdkPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
@@ -9,6 +10,17 @@ public class SwiftFlutterCueLightShowSdkPlugin: NSObject, FlutterPlugin {
   }
 
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
-    result("iOS " + UIDevice.current.systemVersion)
+    if (call.method == "launchCue") {
+        print("launching Cue SDK")
+        
+        let initialController = NavigationManager.initialController()
+        initialController.modalPresentationStyle = .overFullScreen
+        let rootViewController:UIViewController! = UIApplication.shared.keyWindow?.rootViewController
+        rootViewController.present(initialController, animated: true, completion: nil)
+        
+    } else if (call.method == "fetchTheme") {
+        print("fetching CUE Theme")
+        CUEMultiDownloader.fetchCUETheme()
+    }
   }
 }
