@@ -24,13 +24,6 @@ rootProject.allprojects {
         maven {
             url "https://jitpack.io"
         }
-        maven {
-            url = "https://cueaudio.jfrog.io/cueaudio/libs-release-local"
-            credentials {
-                username = "aloompa"
-                password = "Nmii35rf9esOrsHxdw9I8K5MwTM0SDIizkBvkhBPzx6aba0CEf4J0sYiOx4nLypH"
-            }
-        }
     }
 }
 
@@ -50,6 +43,4 @@ android {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-
-    implementation 'com.cueaudio:cuelive:2.+'
 }
