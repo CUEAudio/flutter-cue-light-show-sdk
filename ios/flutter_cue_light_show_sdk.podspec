@@ -16,14 +16,6 @@ Cue Light Show
   s.source_files = 'Classes/**/*'
   s.static_framework = true
   s.dependency 'Flutter'
-  s.dependency 'MQTTClient'
-  s.dependency 'TrueTime'
-  s.dependency 'Reachability'
-  s.dependency 'lottie-ios', '2.5.3'
-  s.dependency 'CUELive-framework', '~> 2.2'
-  s.dependency 'CUELive-bundle-Default', '~> 2.2'
-  s.dependency 'engine', '~> 1.14'
-  s.dependency 'CUEBluetooth'
   s.platform = :ios, '13.0'
 
   # Flutter.framework does not contain a i386 slice.
