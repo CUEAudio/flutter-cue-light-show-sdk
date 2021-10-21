@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_cue_light_show_sdk/flutter_cue_light_show_sdk.dart';
 
 void main() {
@@ -27,7 +26,7 @@ class _MyAppState extends State<MyApp> {
         body: Column(
           children: <Widget>[
             TextButton(
-              child: Text('Fetch Theme'),
+              child: const Text('Fetch Theme'),
               onPressed: () async {
                 try {
                   await FlutterCueLightShowSdk.fetchTheme();
@@ -37,7 +36,7 @@ class _MyAppState extends State<MyApp> {
               },
             ),
             TextButton(
-              child: Text('Launch CUE'),
+              child: const Text('Launch CUE'),
               onPressed: () async {
                 try {
                   await FlutterCueLightShowSdk.launchCue();
