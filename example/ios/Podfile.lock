@@ -1,20 +1,26 @@
 PODS:
-  - CUEBluetooth (0.0.11)
-  - CUELive-bundle-Default (2.14.0)
-  - CUELive-framework (2.14.0)
-  - engine (1.35.0)
+  - CUEBluetooth (0.0.14)
+  - CUELive-bundle-Default (3.3.11)
+  - CUELive-framework (3.3.11):
+    - CUEBluetooth
+    - engine
+    - lottie-ios (= 3.3.0)
+    - MQTTClient (= 0.15.3)
+    - ReachabilitySwift (= 5.0.0)
+    - TrueTime (= 5.0.3)
+  - engine (1.41.3)
   - Flutter (1.0.0)
   - flutter_cue_light_show_sdk (0.0.1):
     - CUEBluetooth
-    - CUELive-bundle-Default (~> 2.2)
-    - CUELive-framework (~> 2.2)
+    - CUELive-bundle-Default (~> 3.0)
+    - CUELive-framework (~> 3.0)
     - engine (~> 1.14)
     - Flutter
-    - lottie-ios (= 2.5.3)
-    - MQTTClient
-    - Reachability
-    - TrueTime
-  - lottie-ios (2.5.3)
+    - lottie-ios (= 3.3.0)
+    - MQTTClient (= 0.15.3)
+    - ReachabilitySwift (= 5.0.0)
+    - TrueTime (= 5.0.3)
+  - lottie-ios (3.3.0)
   - MQTTClient (0.15.3):
     - MQTTClient/Core (= 0.15.3)
   - MQTTClient/Core (0.15.3):
@@ -23,7 +29,7 @@ PODS:
   - MQTTClient/Manager (0.15.3):
     - MQTTClient/Min
   - MQTTClient/Min (0.15.3)
-  - Reachability (3.2)
+  - ReachabilitySwift (5.0.0)
   - TrueTime (5.0.3)
 
 DEPENDENCIES:
@@ -39,7 +45,7 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - lottie-ios
     - MQTTClient
-    - Reachability
+    - ReachabilitySwift
     - TrueTime
 
 EXTERNAL SOURCES:
@@ -49,17 +55,17 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/flutter_cue_light_show_sdk/ios"
 
 SPEC CHECKSUMS:
-  CUEBluetooth: e04c4001b6767e522ccc0d0820088b5b0c3280f6
-  CUELive-bundle-Default: 5cce318ab1f833028bd04af8c95093cda5c3d43c
-  CUELive-framework: c6928da6d562557b0ff36fdaa691e1dcf62e17b5
-  engine: c6ab70feb552e52565de1733cb209d844a39c15d
-  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
-  flutter_cue_light_show_sdk: 9fdcb3df79c35049e390128c44020df36f89567d
-  lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
+  CUEBluetooth: 70970b4f9c02908332efff412601232001a5d2bf
+  CUELive-bundle-Default: 276b1e12dd355c7b2b9caca26c1b1b9004c74f47
+  CUELive-framework: fde438b55330086dc0b568c687a92352c56fd45f
+  engine: 35c1718442430e4eb143a67e4e3ff249ea091818
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  flutter_cue_light_show_sdk: 9f16be1cf5bc82076d01f37f87482d7cc9192fec
+  lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   MQTTClient: 0dfa04e789479c2e461786464969895c1fcb0875
-  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   TrueTime: b49551ffafb28a9dee04e51b226f42a416010842
 
-PODFILE CHECKSUM: a3315ca49a1fd2602939e33df25304bdecc5175d
+PODFILE CHECKSUM: e34a963b20cb89ee604608a8474f88d81b82c28b
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.3
