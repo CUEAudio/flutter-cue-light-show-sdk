@@ -1,0 +1,71 @@
+PODS:
+  - CUEBluetooth (0.0.14)
+  - CUELive-bundle-Default (3.3.11)
+  - CUELive-framework (3.3.11):
+    - CUEBluetooth
+    - engine
+    - lottie-ios (= 3.3.0)
+    - MQTTClient (= 0.15.3)
+    - ReachabilitySwift (= 5.0.0)
+    - TrueTime (= 5.0.3)
+  - engine (1.41.3)
+  - Flutter (1.0.0)
+  - flutter_cue_light_show_sdk (0.0.1):
+    - CUEBluetooth
+    - CUELive-bundle-Default (~> 3.0)
+    - CUELive-framework (~> 3.0)
+    - engine (~> 1.14)
+    - Flutter
+    - lottie-ios (= 3.3.0)
+    - MQTTClient (= 0.15.3)
+    - ReachabilitySwift (= 5.0.0)
+    - TrueTime (= 5.0.3)
+  - lottie-ios (3.3.0)
+  - MQTTClient (0.15.3):
+    - MQTTClient/Core (= 0.15.3)
+  - MQTTClient/Core (0.15.3):
+    - MQTTClient/Manager
+    - MQTTClient/Min
+  - MQTTClient/Manager (0.15.3):
+    - MQTTClient/Min
+  - MQTTClient/Min (0.15.3)
+  - ReachabilitySwift (5.0.0)
+  - TrueTime (5.0.3)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - flutter_cue_light_show_sdk (from `.symlinks/plugins/flutter_cue_light_show_sdk/ios`)
+
+SPEC REPOS:
+  https://cueaudio.jfrog.io/cueaudio/api/pods/cocoapods-local:
+    - CUEBluetooth
+    - CUELive-bundle-Default
+    - CUELive-framework
+    - engine
+  https://github.com/CocoaPods/Specs.git:
+    - lottie-ios
+    - MQTTClient
+    - ReachabilitySwift
+    - TrueTime
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  flutter_cue_light_show_sdk:
+    :path: ".symlinks/plugins/flutter_cue_light_show_sdk/ios"
+
+SPEC CHECKSUMS:
+  CUEBluetooth: 70970b4f9c02908332efff412601232001a5d2bf
+  CUELive-bundle-Default: 276b1e12dd355c7b2b9caca26c1b1b9004c74f47
+  CUELive-framework: fde438b55330086dc0b568c687a92352c56fd45f
+  engine: 35c1718442430e4eb143a67e4e3ff249ea091818
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  flutter_cue_light_show_sdk: 9f16be1cf5bc82076d01f37f87482d7cc9192fec
+  lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
+  MQTTClient: 0dfa04e789479c2e461786464969895c1fcb0875
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  TrueTime: b49551ffafb28a9dee04e51b226f42a416010842
+
+PODFILE CHECKSUM: e34a963b20cb89ee604608a8474f88d81b82c28b
+
+COCOAPODS: 1.11.3
