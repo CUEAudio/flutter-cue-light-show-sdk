@@ -4,6 +4,9 @@
     <application>
         <activity android:name="com.cueaudio.live.CUEActivity"
             android:theme="@style/CUEAppTheme" />
+        <meta-data
+            android:name="io.sentry.dsn"
+            android:value="" />
     </application>
 
 </manifest>
