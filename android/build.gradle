@@ -2,10 +2,10 @@ group 'com.aloompa.cue_light_show.flutter_cue_light_show_sdk'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.7.0'
+    ext.kotlin_version = '1.7.10'
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
@@ -20,7 +20,7 @@ rootProject.allprojects {
 
     repositories {
         google()
-        jcenter()
+        mavenCentral()
         maven {
             url "https://jitpack.io"
         }
@@ -51,6 +51,11 @@ android {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    implementation 'com.cueaudio:cuelive:3.8.12'
-}
+    implementation ("com.cueaudio:cuelive:3.+") {
+        exclude group: 'androidx.appcompat', module: 'appcompat'
+        exclude group: 'com.google.android.material', module: 'material'
+    }
 
+    implementation'androidx.appcompat:appcompat:1.4.1'
+    implementation'com.google.android.material:material:1.6.0'
+}
