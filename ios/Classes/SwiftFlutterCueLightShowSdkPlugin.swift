@@ -1,6 +1,6 @@
 import Flutter
 import UIKit
-import CUELive
+import WebViewSDK
 
 public class SwiftFlutterCueLightShowSdkPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
@@ -12,15 +12,23 @@ public class SwiftFlutterCueLightShowSdkPlugin: NSObject, FlutterPlugin {
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     if (call.method == "launchCue") {
         print("launching Cue SDK")
-        
-        let initialController = NavigationManager.initialController()
-        initialController.modalPresentationStyle = .overFullScreen
-        let rootViewController:UIViewController! = UIApplication.shared.keyWindow?.rootViewController
-        rootViewController.present(initialController, animated: true, completion: nil)
-        
-    } else if (call.method == "fetchTheme") {
-        print("fetching CUE Theme")
-        CUEMultiDownloader.fetchCUETheme()
+        let arguments = call.arguments as? NSArray
+        let urlString: String  = arguments?[0] as! String
+
+        let sdkController = WebViewController()
+        sdkController.modalPresentationStyle = .overFullScreen
+        if let url = URL(string: urlString) {
+            do {
+                try sdkController.navigateTo(url: url)
+                let rootViewController:UIViewController! = UIApplication.shared.keyWindow?.rootViewController
+                rootViewController.present(sdkController, animated: true, completion: nil)
+            } catch InvalidUrlError.runtimeError(_){
+                print("invalid url")
+            } catch {
+                print("error launching Cue SDK")
+            }
+            //present(sdkController, animated: true)
+        }
     }
   }
 }

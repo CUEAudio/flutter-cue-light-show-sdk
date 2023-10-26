@@ -30,9 +30,10 @@ class FlutterCueLightShowSdkPlugin : FlutterPlugin, MethodCallHandler, ActivityA
     }
 
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
-        if (call.method == "fetchTheme") {
-            CUEController.fetchCueTheme(activity)
-        } else if (call.method == "launchCue") {
+        if (call.method == "launchCue") {
+            val args = call.arguments<ArrayList<*>>()
+            val urlString = args[0] as String
+
             val i = Intent(activity, CUEActivity::class.java)
             i.putExtra("arg:enable_navigation_menu", true)
             startActivity(activity, i, null)
