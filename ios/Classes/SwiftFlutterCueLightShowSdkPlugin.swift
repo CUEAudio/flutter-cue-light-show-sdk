@@ -10,8 +10,8 @@ public class SwiftFlutterCueLightShowSdkPlugin: NSObject, FlutterPlugin {
   }
 
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
-    if (call.method == "launchCue") {
-        print("launching Cue SDK")
+    if (call.method == "launchCueV2") {
+        print("launching Cue SDK V2")
         let arguments = call.arguments as? NSArray
         let urlString: String  = arguments?[0] as! String
 
@@ -27,8 +27,17 @@ public class SwiftFlutterCueLightShowSdkPlugin: NSObject, FlutterPlugin {
             } catch {
                 print("error launching Cue SDK")
             }
-            //present(sdkController, animated: true)
-        }
+        } else if (call.method == "launchCue") {
+           print("launching Cue SDK")
+
+           let initialController = NavigationManager.initialController()
+           initialController.modalPresentationStyle = .overFullScreen
+           let rootViewController:UIViewController! = UIApplication.shared.keyWindow?.rootViewController
+           rootViewController.present(initialController, animated: true, completion: nil)
+       } else if (call.method == "fetchTheme") {
+           print("fetching CUE Theme")
+           CUEMultiDownloader.fetchCUETheme()
+       }
     }
   }
 }

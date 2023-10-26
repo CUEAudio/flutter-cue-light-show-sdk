@@ -23,18 +23,40 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('CUE Plugin'),
         ),
-        body: Center(
-          child: TextButton(
-            child: const Text('Launch CUE Light Show'),
-            onPressed: () async {
-              try {
-                await FlutterCueLightShowSdk.launchCue(
-                    'https://thelabs.testingdxp.com/?gameId=light-show');
-              } catch (e) {
-                print(e);
-              }
-            },
-          ),
+        body: Column(
+          children: <Widget>[
+            TextButton(
+              child: const Text('Fetch Theme'),
+              onPressed: () async {
+                try {
+                  await FlutterCueLightShowSdk.fetchTheme();
+                } catch (e) {
+                  print(e);
+                }
+              },
+            ),
+            TextButton(
+              child: const Text('Launch CUE'),
+              onPressed: () async {
+                try {
+                  await FlutterCueLightShowSdk.launchCue();
+                } catch (e) {
+                  print(e);
+                }
+              },
+            ),
+            TextButton(
+              child: const Text('Launch CUE V2'),
+              onPressed: () async {
+                try {
+                  await FlutterCueLightShowSdk.launchCueV2(
+                      'https://thelabs.testingdxp.com/?gameId=light-show');
+                } catch (e) {
+                  print(e);
+                }
+              },
+            ),
+          ],
         ),
       ),
     );
