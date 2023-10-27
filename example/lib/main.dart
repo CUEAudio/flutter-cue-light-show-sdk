@@ -45,6 +45,17 @@ class _MyAppState extends State<MyApp> {
                 }
               },
             ),
+            TextButton(
+              child: const Text('Launch CUE V2'),
+              onPressed: () async {
+                try {
+                  await FlutterCueLightShowSdk.launchCueV2(
+                      'https://thelabs.testingdxp.com/?gameId=light-show');
+                } catch (e) {
+                  print(e);
+                }
+              },
+            ),
           ],
         ),
       ),

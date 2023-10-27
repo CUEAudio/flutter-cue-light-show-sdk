@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'flutter_cue_light_show_sdk'
-  s.version          = '0.0.1'
+  s.version          = '2.0.0'
   s.summary          = 'Cue Light Show'
   s.description      = <<-DESC
 Cue Light Show
@@ -16,15 +16,10 @@ Cue Light Show
   s.source_files = 'Classes/**/*'
   s.static_framework = true
   s.dependency 'Flutter'
-  s.dependency 'MQTTClient', '0.15.3'
-  s.dependency 'TrueTime', '5.0.3'
-  s.dependency 'ReachabilitySwift', '5.0.0'
-  s.dependency 'lottie-ios', '4.1.3'
+  s.dependency 'WebViewSDK'
   s.dependency 'CUELive-framework', '~> 3.6.2'
   s.dependency 'CUELive-bundle-Default', '~> 3.0'
-  s.dependency 'engine', '~> 1.14'
-  s.dependency 'CUEBluetooth'
-  s.platform = :ios, '13.0'
+  s.platform = :ios, '15.0'
 
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }

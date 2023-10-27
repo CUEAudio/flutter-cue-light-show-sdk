@@ -6,6 +6,7 @@ import androidx.annotation.NonNull
 import androidx.core.content.ContextCompat.startActivity
 import com.cueaudio.live.CUEActivity
 import com.cueaudio.live.CUEController
+import com.cueaudio.webviewsdk.WebViewController
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
@@ -36,6 +37,17 @@ class FlutterCueLightShowSdkPlugin : FlutterPlugin, MethodCallHandler, ActivityA
             val i = Intent(activity, CUEActivity::class.java)
             i.putExtra("arg:enable_navigation_menu", true)
             startActivity(activity, i, null)
+        } else if (call.method == "launchCueV2") {
+            val args: List<Any>? = call.arguments as? List<Any>
+            val url = args?.firstOrNull() as? String
+
+            if (url != null) {
+                val webViewController = WebViewController(activity)
+                webViewController.openInChrome(url)
+                result.success("URL opened successfully")
+            } else {
+                result.error("URL_ERROR", "URL is null or missing", null)
+            }
         } else {
             result.notImplemented()
         }
