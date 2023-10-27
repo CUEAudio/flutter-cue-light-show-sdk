@@ -5,5 +5,5 @@ class FlutterCueLightShowSdk {
 
   static Future<void> launchCue() async {}
 
-  static Future<void> launchCueV2() async {}
+  static Future<void> launchCueV2(String url) async {}
 }
