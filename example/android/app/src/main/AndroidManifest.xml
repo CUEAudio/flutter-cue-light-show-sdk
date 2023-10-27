@@ -1,10 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.aloompa.cue_light_show.flutter_cue_light_show_sdk_example">
+    package="com.aloompa.cue_light_show.flutter_cue_light_show_sdk_example"
+    xmlns:tools="http://schemas.android.com/tools">
+
    <application
         android:label="flutter_cue_light_show_sdk_example"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        tools:replace="android:label">
         <activity
             android:name=".MainActivity"
+            android:exported="true"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
