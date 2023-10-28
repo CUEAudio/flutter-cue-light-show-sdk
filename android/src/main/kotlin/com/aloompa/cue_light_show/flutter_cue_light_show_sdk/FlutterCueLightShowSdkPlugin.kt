@@ -43,7 +43,7 @@ class FlutterCueLightShowSdkPlugin : FlutterPlugin, MethodCallHandler, ActivityA
 
             if (url != null) {
                 val webViewController = WebViewController(activity)
-                webViewController.openInChrome(url)
+                webViewController.navigateTo(url)
                 result.success("URL opened successfully")
             } else {
                 result.error("URL_ERROR", "URL is null or missing", null)
