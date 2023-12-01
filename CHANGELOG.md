@@ -1,3 +1,3 @@
-## 0.0.1
+## 1.0.7
 
-* TODO: Describe initial release.
+* Flutter plugin implementing the native CUE Light Show SDK for Android and iOS.

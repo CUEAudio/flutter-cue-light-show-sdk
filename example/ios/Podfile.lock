@@ -24,7 +24,7 @@ PODS:
     - MQTTClient/Min
   - MQTTClient/Min (0.15.3)
   - TrueTime (5.0.3)
-  - WebViewSDK (0.0.2)
+  - WebViewSDK (0.0.3)
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
@@ -58,7 +58,7 @@ SPEC CHECKSUMS:
   lottie-ios: d0954d3150061f662ed0adf96ef98d7421864c47
   MQTTClient: 0dfa04e789479c2e461786464969895c1fcb0875
   TrueTime: b49551ffafb28a9dee04e51b226f42a416010842
-  WebViewSDK: 2b19c56f3a3327d8e2e03fb57a8369ea2f2c82ce
+  WebViewSDK: b41decc76a18cb4469bd4164f614517954adede1
 
 PODFILE CHECKSUM: f222e0d10b50bdb3087b55e9be1bf39075495971
 
