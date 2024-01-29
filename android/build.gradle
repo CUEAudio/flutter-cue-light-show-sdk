@@ -47,6 +47,7 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 33
+    namespace 'com.aloompa.cue_light_show.flutter_cue_light_show_sdk'
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
