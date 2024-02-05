@@ -16,7 +16,6 @@ Cue Light Show
   s.source_files = 'Classes/**/*'
   s.static_framework = true
   s.dependency 'Flutter'
-  s.dependency 'WebViewSDK'
   s.dependency 'CUELive-framework', '~> 3.6.2'
   s.dependency 'CUELive-bundle-Default', '~> 3.0'
   s.platform = :ios, '15.0'

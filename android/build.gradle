@@ -2,7 +2,7 @@ group 'com.aloompa.cue_light_show.flutter_cue_light_show_sdk'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.7.10'
+    ext.kotlin_version = '1.9.0'
     repositories {
         google()
         mavenCentral()
@@ -31,14 +31,6 @@ rootProject.allprojects {
                 password = "Nmii35rf9esOrsHxdw9I8K5MwTM0SDIizkBvkhBPzx6aba0CEf4J0sYiOx4nLypH"
             }
         }
-        maven {
-            url "http://artifactory.aloompa.com:80/artifactory/libs-release-local"
-            credentials {
-                username = System.getenv("artifactory_username")
-                password = System.getenv("artifactory_password")
-            }
-            allowInsecureProtocol = true
-        }
     }
 }
 
@@ -46,7 +38,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 33
+    namespace 'com.aloompa.cue_light_show.flutter_cue_light_show_sdk'
+    compileSdkVersion 34
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -67,5 +60,4 @@ dependencies {
     implementation'androidx.appcompat:appcompat:1.4.1'
     implementation'com.google.android.material:material:1.6.0'
     implementation("androidx.browser:browser:1.5.0")
-    implementation(group: 'cueaudio', name: 'cue', version: '2.0.1', ext: 'aar')
 }
