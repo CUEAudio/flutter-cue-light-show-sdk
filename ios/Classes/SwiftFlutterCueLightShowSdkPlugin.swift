@@ -17,7 +17,7 @@ public class SwiftFlutterCueLightShowSdkPlugin: NSObject, FlutterPlugin {
             let urlString: String  = arguments?[0] as! String
             
             let sdkController = WebViewController()
-            sdkController.modalPresentationStyle = .popover
+            sdkController.modalPresentationStyle = .fullScreen
             if let url = URL(string: urlString) {
                 do {
                     try sdkController.navigateTo(url: url)
