@@ -1,20 +1,19 @@
 PODS:
   - CUEBluetooth (0.0.14)
-  - CUELive-bundle-Default (3.6.12)
-  - CUELive-framework (3.6.12):
+  - CUELive-bundle-Default (3.8.3)
+  - CUELive-framework (3.8.3):
     - CUEBluetooth (~> 0.0.10)
     - engine (~> 1.20)
-    - lottie-ios (= 4.1.3)
+    - lottie-ios (= 4.3.3)
     - MQTTClient (= 0.15.3)
     - TrueTime (= 5.0.3)
-  - engine (1.47.5)
+  - engine (1.55.0)
   - Flutter (1.0.0)
   - flutter_cue_light_show_sdk (2.0.0):
     - CUELive-bundle-Default (~> 3.0)
-    - CUELive-framework (~> 3.6.2)
+    - CUELive-framework (~> 3.0)
     - Flutter
-    - WebViewSDK
-  - lottie-ios (4.1.3)
+  - lottie-ios (4.3.3)
   - MQTTClient (0.15.3):
     - MQTTClient/Core (= 0.15.3)
   - MQTTClient/Core (0.15.3):
@@ -24,7 +23,6 @@ PODS:
     - MQTTClient/Min
   - MQTTClient/Min (0.15.3)
   - TrueTime (5.0.3)
-  - WebViewSDK (0.0.3)
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
@@ -40,7 +38,6 @@ SPEC REPOS:
     - lottie-ios
     - MQTTClient
     - TrueTime
-    - WebViewSDK
 
 EXTERNAL SOURCES:
   Flutter:
@@ -50,16 +47,15 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CUEBluetooth: 70970b4f9c02908332efff412601232001a5d2bf
-  CUELive-bundle-Default: a778335ff9c1c13429b17810bb6fa79b1c03dd69
-  CUELive-framework: 6f2464917901b03b2c3c4d6ad3696008289cb8d1
-  engine: bbe296eba3eaf4ec961e7843ecf924210526e8d6
+  CUELive-bundle-Default: 6c08ef02898c8f6ec622a4153bc98673a632375f
+  CUELive-framework: d02a3e62fb4cef8aca99b20a3d142ad552128d8b
+  engine: 6a776a9e986c541f7853c146582654bc8b94e6fd
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
-  flutter_cue_light_show_sdk: 025bc60e25e7b8d5788b278c6a4fca3fc04ca5ce
-  lottie-ios: d0954d3150061f662ed0adf96ef98d7421864c47
+  flutter_cue_light_show_sdk: 9ca902360f637a8a2e91d2aff1e4a8397580be4e
+  lottie-ios: 25e7b2675dad5c3ddad369ac9baab03560c5bfdd
   MQTTClient: 0dfa04e789479c2e461786464969895c1fcb0875
   TrueTime: b49551ffafb28a9dee04e51b226f42a416010842
-  WebViewSDK: b41decc76a18cb4469bd4164f614517954adede1
 
 PODFILE CHECKSUM: f222e0d10b50bdb3087b55e9be1bf39075495971
 
-COCOAPODS: 1.14.2
+COCOAPODS: 1.15.2
