@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'flutter_cue_light_show_sdk'
-  s.version          = '2.0.0'
+  s.version          = '2.0.1'
   s.summary          = 'Cue Light Show'
   s.description      = <<-DESC
 Cue Light Show

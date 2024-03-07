@@ -1,3 +1,7 @@
+## 1.1.2
+
+* Fixed typo in podspec to allow automatically updating to latest version of the native CUE SDK
+
 ## 1.1.1
 
 * Removed placeholder logo images
