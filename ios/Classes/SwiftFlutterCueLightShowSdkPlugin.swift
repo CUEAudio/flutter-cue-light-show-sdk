@@ -29,7 +29,25 @@ public class SwiftFlutterCueLightShowSdkPlugin: NSObject, FlutterPlugin {
                     print("error launching Cue SDK")
                 }
             }
-        } else if (call.method == "launchCue") {
+        } else if (call.method == "prefetchCueV2") {
+            print("prefetching CUE V2 SDK assets")
+            let arguments = call.arguments as? NSArray
+            let urlString: String  = arguments?[0] as! String
+
+            let sdkController = WebViewController()
+            if let url = URL(string: "\(urlString)&preload=true") {
+                do {
+                    try sdkController.navigateTo(url: url) {progress in
+                        // You can get progress from 0 to 100 during the pre-fetch process
+                        print("CUE prefetch progress: \(progress)")
+                    }
+                } catch InvalidUrlError.runtimeError(let message) {
+                    print("CUE prefetch URL is not valid: \(message)")
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+        }  else if (call.method == "launchCue") {
             print("launching Cue SDK")
             
             let initialController = NavigationManager.initialController()
