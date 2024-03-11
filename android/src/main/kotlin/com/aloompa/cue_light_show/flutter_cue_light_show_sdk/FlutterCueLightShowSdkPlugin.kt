@@ -1,7 +1,9 @@
 package com.aloompa.cue_light_show.flutter_cue_light_show_sdk
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
+import android.webkit.WebView
 import androidx.annotation.NonNull
 import androidx.core.content.ContextCompat.startActivity
 import com.cueaudio.live.CUEActivity
@@ -24,10 +26,12 @@ class FlutterCueLightShowSdkPlugin : FlutterPlugin, MethodCallHandler, ActivityA
     /// when the Flutter Engine is detached from the Activity
     private lateinit var channel: MethodChannel
     private lateinit var activity: Activity
+    private lateinit var context: Context
 
     override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
         channel = MethodChannel(flutterPluginBinding.binaryMessenger, "flutter_cue_light_show_sdk")
         channel.setMethodCallHandler(this)
+        context = flutterPluginBinding.applicationContext
     }
 
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
@@ -45,6 +49,19 @@ class FlutterCueLightShowSdkPlugin : FlutterPlugin, MethodCallHandler, ActivityA
                 val webViewController = WebViewController(activity)
                 webViewController.navigateTo(url)
                 result.success("URL opened successfully")
+            } else {
+                result.error("URL_ERROR", "URL is null or missing", null)
+            }
+        } else if (call.method == "prefetchCueV2") {
+            val args: List<Any>? = call.arguments as? List<Any>
+            val url = args?.firstOrNull() as? String
+            val preFetchUrl = url + "&preload=true"
+
+            if (url != null) {
+                val webView = WebView(context)
+                webView.settings.javaScriptEnabled = true
+
+                webView.loadUrl(preFetchUrl)
             } else {
                 result.error("URL_ERROR", "URL is null or missing", null)
             }

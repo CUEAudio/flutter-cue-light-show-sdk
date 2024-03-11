@@ -1,17 +1,17 @@
 PODS:
   - CUEBluetooth (0.0.14)
-  - CUELive-bundle-Default (3.7.7)
-  - CUELive-framework (3.7.7):
+  - CUELive-bundle-Default (3.8.3)
+  - CUELive-framework (3.8.3):
     - CUEBluetooth (~> 0.0.10)
     - engine (~> 1.20)
     - lottie-ios (= 4.3.3)
     - MQTTClient (= 0.15.3)
     - TrueTime (= 5.0.3)
-  - engine (1.51.0)
+  - engine (1.55.0)
   - Flutter (1.0.0)
   - flutter_cue_light_show_sdk (2.0.0):
     - CUELive-bundle-Default (~> 3.0)
-    - CUELive-framework (~> 3.7.7)
+    - CUELive-framework (~> 3.0)
     - Flutter
     - WebViewSDK
   - lottie-ios (4.3.3)
@@ -24,7 +24,7 @@ PODS:
     - MQTTClient/Min
   - MQTTClient/Min (0.15.3)
   - TrueTime (5.0.3)
-  - WebViewSDK (0.0.6)
+  - WebViewSDK (0.0.8)
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
@@ -50,16 +50,16 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CUEBluetooth: 70970b4f9c02908332efff412601232001a5d2bf
-  CUELive-bundle-Default: d89a565b816f26fa6d6ee48e7020b6f492ed9b06
-  CUELive-framework: aa2574597f71b2202646f1974b58844f160a9d0d
-  engine: 5d0748c97392563d33a6b54b79946b1c2a89822c
+  CUELive-bundle-Default: 6c08ef02898c8f6ec622a4153bc98673a632375f
+  CUELive-framework: d02a3e62fb4cef8aca99b20a3d142ad552128d8b
+  engine: 6a776a9e986c541f7853c146582654bc8b94e6fd
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
-  flutter_cue_light_show_sdk: b255ca4c9e63cbde4a35522c261618684c81f5af
+  flutter_cue_light_show_sdk: 88c947bc24671171e22e509969cfe6c4995e9f2a
   lottie-ios: 25e7b2675dad5c3ddad369ac9baab03560c5bfdd
   MQTTClient: 0dfa04e789479c2e461786464969895c1fcb0875
   TrueTime: b49551ffafb28a9dee04e51b226f42a416010842
-  WebViewSDK: 76c3c578d9701c516badf75a2cab5c1eaae27b1e
+  WebViewSDK: 8f6f3c62136580612912885053d1905f4ba130c7
 
 PODFILE CHECKSUM: f222e0d10b50bdb3087b55e9be1bf39075495971
 
-COCOAPODS: 1.14.2
+COCOAPODS: 1.15.2

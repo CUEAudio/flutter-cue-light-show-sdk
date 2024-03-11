@@ -12,6 +12,10 @@ abstract class FlutterCueLightShowSdk {
     await _channel.invokeMethod('launchCueV2', <dynamic>[urlString]);
   }
 
+  static Future<void> prefetchCueV2(String urlString) async {
+    await _channel.invokeMethod('prefetchCueV2', <dynamic>[urlString]);
+  }
+
   static Future<void> fetchTheme() async {
     await _channel.invokeMethod('fetchTheme');
   }
