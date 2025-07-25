@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'flutter_cue_light_show_sdk'
-  s.version          = '2.0.0'
+  s.version          = '3.0.0'
   s.summary          = 'Cue Light Show'
   s.description      = <<-DESC
 Cue Light Show
@@ -16,7 +16,7 @@ Cue Light Show
   s.source_files = 'Classes/**/*'
   s.static_framework = true
   s.dependency 'Flutter'
-  s.dependency 'WebViewSDK'
+  s.dependency 'CueLightShow'
   s.dependency 'CUELive-framework', '~> 3.0'
   s.dependency 'CUELive-bundle-Default', '~> 3.0'
   s.platform = :ios, '15.0'
