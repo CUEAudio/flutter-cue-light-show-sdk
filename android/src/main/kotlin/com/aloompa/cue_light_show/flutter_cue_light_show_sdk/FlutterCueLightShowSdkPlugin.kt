@@ -8,7 +8,7 @@ import androidx.annotation.NonNull
 import androidx.core.content.ContextCompat.startActivity
 import com.cueaudio.live.CUEActivity
 import com.cueaudio.live.CUEController
-import com.cueaudio.webviewsdk.WebViewController
+import com.cueaudio.cuelightshow.WebViewController
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
