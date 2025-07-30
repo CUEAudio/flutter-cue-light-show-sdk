@@ -1,6 +1,6 @@
 import Flutter
 import UIKit
-import WebViewSDK
+import CueLightShow
 import CUELive
 
 public class SwiftFlutterCueLightShowSdkPlugin: NSObject, FlutterPlugin {
